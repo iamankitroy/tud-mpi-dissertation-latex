@@ -23,8 +23,8 @@
 % --- Derive from class scrbook
 \LoadClass[%
   a4paper,
-  twoside       = true,
-  fontsize      = 11pt,
+  twoside       = false,
+  fontsize      = 12pt,
   chapterprefix = false,           % don't print "Chapter XX" before chapter headings
   toc           = listof,          % include list of tables and figures in toc
   toc           = bib,             % include bib in toc
@@ -108,8 +108,8 @@
 \def\defaulthpos{30mm + \@titlepagebindingcor}%
 
 % Vertical positions of title page entities
-\def\titlevpos{100.2mm}%
-\def\informationvpos{147mm}%
+\def\titlevpos{130mm}%
+\def\informationvpos{160mm}%
 \def\examinervpos{196.5mm}%
 \def\datevpos{241mm}%
 
@@ -187,13 +187,13 @@
         }\\
         \fontfamily{phv}\selectfont
         \textcolor{TUMBlue}{
-          Technische Universit\"at M\"unchen
+          %Technische Universit\"at M\"unchen
         }
     \end{textblock*}
 
-    % TUM logo
-    \begin{textblock*}{\TUMLogoWidth}(\paperwidth - \TUMLogoWidth - 10mm, 10mm)
-        \noindent \includegraphics[height = 10mm]{TUM.pdf}
+    % MPI logo
+    \begin{textblock*}{\TUMLogoWidth}(\paperwidth - \TUMLogoWidth - 56mm, 10mm)
+        \noindent \includegraphics[height = 15mm]{MPI.pdf}
     \end{textblock*}
 
 
@@ -203,12 +203,16 @@
     \begin{textblock*}{\defaultwidth}[0,1](\defaulthpos, \titlevpos)
         \centering
 
-        {\bfseries \Large \textcolor{TUMBlue} \@title}
+        {\bfseries \LARGE \textcolor{TUMBlueDarkest} \@title}
         \ifdefempty{\@subtitle}{}{\vspace{1ex}\bfseries\large \@subtitle}
 
-        \vspace{10mm}
+        \vspace{15mm}
 
-        {\bfseries \large \@author}\\
+        vorgelegt von\\
+        
+        \vspace{5mm}
+
+        {\bfseries \Large \@author}\\
 
     \end{textblock*}
 
@@ -217,63 +221,72 @@
     % Informationstext
     \begin{textblock*}{\defaultwidth}(\defaulthpos, \informationvpos)
         \centering
-        \raggedright
+        % \raggedright
 
-        Vollst\"andiger Abdruck der von der {\@faculty} der Technischen
-        Universit\"at M\"unchen zur Erlangung des akademischen Grades eines\\
+        Zur Erlangung des akademischen Grades eines\\
 
         \vspace{6mm}
 
         \centering {\bfseries \large {\@degree}}\\
 
         \vspace{6mm}
-        \raggedright
+        % \raggedright
 
-        genehmigten Dissertation.\\
+        der Fakult\"at f\"ur Chemie und Chemische Biologie\\
+        der Technischen Universit\"at Dortmund\\
+
+        \vspace{6mm}
+        % \raggedright
+        
+        Angefertigt am Max-Planck Institut f\"ur Molekulare Physiologie in Dortmund\\
+
+        \vspace{30mm}
+
+        \centering {\bfseries \large {June 2024}}\\
 
     \end{textblock*}
 
 
 
     % Prüfer
-    \begin{textblock*}{\defaultwidth}(\defaulthpos, \examinervpos)
-        \centering
-        \raggedright
+    % \begin{textblock*}{\defaultwidth}(\defaulthpos, \examinervpos)
+    %     \centering
+    %     \raggedright
 
-        \textbf{Vorsitzender:}\\
-        \hspace{8mm}\hphantom{1. }\@vorsitz
+    %     \textbf{Vorsitzender:}\\
+    %     \hspace{8mm}\hphantom{1. }\@vorsitz
 
-        \vspace{2mm}
+    %     \vspace{2mm}
 
-        \textbf{Pr\"ufende der Dissertation:}\\
-        \hspace{8mm}1. \@erstpruef\\
-        \hspace{8mm}2. \@zweitpruef
-        \ifzweitpruefaffil
-          ,\\\hspace{8mm}\hphantom{2. }\@zweitpruefaffil
-        \fi
-        \ifdrittpruefset
-          \\\hspace{8mm}3. \@drittpruef
-          \ifdrittpruefaffil
-            ,\\\hspace{8mm}\hphantom{2. }\@drittpruefaffil
-          \fi
-        \fi
+    %     \textbf{Pr\"ufende der Dissertation:}\\
+    %     \hspace{8mm}1. \@erstpruef\\
+    %     \hspace{8mm}2. \@zweitpruef
+    %     \ifzweitpruefaffil
+    %       ,\\\hspace{8mm}\hphantom{2. }\@zweitpruefaffil
+    %     \fi
+    %     \ifdrittpruefset
+    %       \\\hspace{8mm}3. \@drittpruef
+    %       \ifdrittpruefaffil
+    %         ,\\\hspace{8mm}\hphantom{2. }\@drittpruefaffil
+    %       \fi
+    %     \fi
 
-    \end{textblock*}
+    % \end{textblock*}
 
 
 
-    % Daten
-    \begin{textblock*}{\defaultwidth}(\defaulthpos, \datevpos)
-        \raggedright
+    % % Daten
+    % \begin{textblock*}{\defaultwidth}(\defaulthpos, \datevpos)
+    %     \raggedright
 
-        Die Dissertation wurde am {\@date} bei der Technischen Universit\"at
-        M\"unchen eingereicht und durch die {\@faculty}
-        \ifdateaccepted
-          am {\@dateaccepted }
-        \fi
-        angenommen.
+    %     Die Dissertation wurde am {\@date} bei der Technischen Universit\"at
+    %     M\"unchen eingereicht und durch die {\@faculty}
+    %     \ifdateaccepted
+    %       am {\@dateaccepted }
+    %     \fi
+    %     angenommen.
 
-    \end{textblock*}
+    % \end{textblock*}
 
 \end{titlepage}
 

@@ -1,0 +1,14 @@
+\begin{thebibliography}{1}
+
+\bibitem{barham2003xen}
+P.~Barham, B.~Dragovic, K.~Fraser, S.~Hand, T.~Harris, A.~Ho, R.~Neugebauer,
+  I.~Pratt, and A.~Warfield.
+\newblock Xen and the art of virtualization.
+\newblock {\em ACM SIGOPS Operating Systems Review}, 37(5):164--177, 2003.
+
+\bibitem{LIS}
+{Lehrstuhl für Integrierte Systeme} [online].
+\newblock 2016.
+\newblock URL: \url{https://www.lis.ei.tum.de/} [last checked 2016-11-28].
+
+\end{thebibliography}

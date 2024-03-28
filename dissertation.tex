@@ -49,18 +49,19 @@
 % "BCOR" for further reading.
 %-------------------------------------------------------------------------------
 % \KOMAoptions{BCOR=3mm}
-
+% Rename bibliography section
 
 
 %-------------------------------------------------------------------------------
 % Faculty
 %-------------------------------------------------------------------------------
-\faculty{Fakultät für Elektrotechnik und Informationstechnik}
+%\faculty{Fakultät für Elektrotechnik und Informationstechnik}
+\faculty{}
 
 %-------------------------------------------------------------------------------
 % Degree
 %-------------------------------------------------------------------------------
-\degree{Doktor-Ingenieurs (Dr.-Ing.)}
+\degree{Doktors der Naturwissenschaften (Dr. rer. nat.)}
 
 %-------------------------------------------------------------------------------
 % Title
@@ -72,23 +73,23 @@
 % YOU ALSO NEED THE BREAK AT THE LAST LINE.
 %-------------------------------------------------------------------------------
 \title{%
-  This is a Very Long Title With Lots and Lots and Lots of\\
-  Fill Words in Order to Demonstrate how it Looks\\
+  A novel density dependent mechanism of\\
+  NPF regulation
 }
 % \subtitle{That is extended by using an additional subtitle}
 
 %-------------------------------------------------------------------------------
 % People
 %-------------------------------------------------------------------------------
-\author{Vorname Nachname}
-\vorsitz{Prof. Dr.-Ing. Vorname Nachname}
-\erstpruef{Prof. Dr.-Ing. Vorname Nachname}
+\author{Ankit Animesh Roy}
+% \vorsitz{Prof. Dr.-Ing. Vorname Nachname}
+% \erstpruef{Prof. Dr.-Ing. Vorname Nachname}
 
 % Use this one for a TUM professor
 % \zweitpruef{Prof. Dr.-Ing. Vorname Nachname}
 
 % Or this one for an external professor
-\zweitpruef[Technische Universität Berlin]{Prof. Dr.-Ing. Vorname Nachname}
+% \zweitpruef[Technische Universität Berlin]{Prof. Dr.-Ing. Vorname Nachname}
 
 % Optionally, add a third examiner
 %\drittpruef[RWTH Aachen]{Prof. Dr.-Ing. Max Mustermann}
@@ -230,8 +231,11 @@
 % Include custom packages here
 %-------------------------------------------------------------------------------
 
-% \usepackage{}
+\usepackage{setspace}
 
+\setlength{\parskip}{12pt}    % spacing after paragraph
+\setlength{\parindent}{0pt}   % paragraph start indentation
+\onehalfspacing               % line spacing
 
 %-------------------------------------------------------------------------------
 % TUM CI colors for PGF
@@ -258,6 +262,11 @@
 }
 
 %-------------------------------------------------------------------------------
+% Rename Bibliography to References
+%-------------------------------------------------------------------------------
+\renewcommand{\bibname}{References}
+
+%-------------------------------------------------------------------------------
 % Correct bad hyphenation here
 %-------------------------------------------------------------------------------
 \hyphenation{op-tical net-works semi-conduc-tor}
@@ -276,7 +285,6 @@
 
 \newacronym{mmu}{MMU}{Memory Management Unit}
 \glsadd{mmu}
-
 
 
 %-------------------------------------------------------------------------------
@@ -303,9 +311,11 @@
 
 
 %-------------------------------------------------------------------------------
+\begin{spacing}{0}  % 0 spacing for content and lists
 \tableofcontents
 \listoffigures
 \listoftables
+\end{spacing}
 \printglossary[type=\acronymtype, nonumberlist]
 
 
